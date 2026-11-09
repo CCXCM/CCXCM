@@ -1,0 +1,185 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="760" height="350"
+     viewBox="0 0 760 350">
+
+  <title>Element Inspector Animation</title>
+
+  <style>
+    .ink { fill: #1f2328; }
+    .serif {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .mono {
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .highlight {
+      fill: rgba(45, 110, 165, 0.16);
+      stroke: rgba(0, 95, 190, 0.9);
+      stroke-width: 1;
+      stroke-dasharray: 5 3;
+    }
+    .guide {
+      stroke: rgba(0, 95, 190, 0.8);
+      stroke-width: 1;
+      stroke-dasharray: 5 4;
+    }
+    .tooltip {
+      fill: #2f3437;
+    }
+    .tip-text {
+      fill: #fff;
+      font-family: monospace;
+      font-size: 11px;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="760" height="350" fill="#fff"/>
+
+  <!-- Static page content -->
+  <g class="ink serif">
+
+    <path d="M32 38 H728" stroke="#1f2328" stroke-width="3"/>
+
+    <text x="32" y="112"
+          font-size="57"
+          font-weight="bold"
+          letter-spacing="-3">
+      Exploring
+    </text>
+
+    <text x="32" y="170"
+          font-size="57"
+          font-weight="bold"
+          letter-spacing="-3">
+      the intersections.
+    </text>
+
+    <g font-family="monospace" font-size="10"
+       letter-spacing="1">
+      <rect x="32" y="192" width="185" height="25"
+            fill="none" stroke="#1f2328"/>
+      <text x="41" y="208">ARTIFICIAL INTELLIGENCE</text>
+
+      <rect x="224" y="192" width="83" height="25"
+            fill="none" stroke="#1f2328"/>
+      <text x="233" y="208">MEDICINE</text>
+    </g>
+
+    <text x="32" y="263" font-size="21" font-weight="bold">
+      A little about me.
+    </text>
+
+    <text x="32" y="290" font-size="13">
+      I take delight in tracing connections across diverse disciplines,
+    </text>
+
+    <text x="32" y="312" font-size="13">
+      and in shaping ideas into tools and projects of genuine use.
+    </text>
+
+  </g>
+
+  <!-- Target 1: heroTitle -->
+  <g opacity="0">
+    <rect class="highlight"
+          x="28" y="48" width="490" height="132"/>
+
+    <path class="guide" d="M28 48 H728 M28 180 H728"/>
+    <path class="guide" d="M28 38 V325 M518 38 V325"/>
+
+    <rect class="tooltip" x="365" y="22" width="153" height="22"/>
+    <text class="tip-text" x="373" y="37">
+      div#heroTitle 490 × 132
+    </text>
+
+    <animate attributeName="opacity"
+      values="0;1;1;0;0"
+      keyTimes="0;0.02;0.22;0.25;1"
+      dur="12s"
+      repeatCount="indefinite"/>
+  </g>
+
+  <!-- Target 2: tags -->
+  <g opacity="0">
+    <rect class="highlight"
+          x="28" y="188" width="285" height="33"/>
+
+    <path class="guide" d="M28 188 H728 M28 221 H728"/>
+    <path class="guide" d="M28 38 V325 M313 38 V325"/>
+
+    <rect class="tooltip" x="155" y="224" width="158" height="22"/>
+    <text class="tip-text" x="163" y="239">
+      div#tags 285 × 33
+    </text>
+
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;0.25;0.28;0.47;0.5;1"
+      dur="12s"
+      repeatCount="indefinite"/>
+  </g>
+
+  <!-- Target 3: about title -->
+  <g opacity="0">
+    <rect class="highlight"
+          x="28" y="239" width="210" height="32"/>
+
+    <path class="guide" d="M28 239 H728 M28 271 H728"/>
+    <path class="guide" d="M28 38 V325 M238 38 V325"/>
+
+    <rect class="tooltip" x="85" y="275" width="183" height="22"/>
+    <text class="tip-text" x="93" y="290">
+      div#aboutTitle 210 × 32
+    </text>
+
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;0.5;0.53;0.72;0.75;1"
+      dur="12s"
+      repeatCount="indefinite"/>
+  </g>
+
+  <!-- Target 4: description -->
+  <g opacity="0">
+    <rect class="highlight"
+          x="28" y="275" width="675" height="45"/>
+
+    <path class="guide" d="M28 275 H728 M28 320 H728"/>
+    <path class="guide" d="M28 38 V325 M703 38 V325"/>
+
+    <rect class="tooltip" x="542" y="248" width="161" height="22"/>
+    <text class="tip-text" x="550" y="263">
+      div#description 675 × 45
+    </text>
+
+    <animate attributeName="opacity"
+      values="0;0;1;1;0"
+      keyTimes="0;0.75;0.78;0.97;1"
+      dur="12s"
+      repeatCount="indefinite"/>
+  </g>
+
+  <!-- Simulated mouse pointer -->
+  <g transform="translate(500 100)">
+    <path d="M0 0 L0 20 L5 15 L10 25 L14 23 L9 13 L17 12 Z"
+          fill="#fff"
+          stroke="#111"
+          stroke-width="1.5"/>
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="500 100;180 200;120 250;600 290;500 100"
+      keyTimes="0;0.25;0.5;0.75;1"
+      dur="12s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+  </g>
+
+</svg>
+
